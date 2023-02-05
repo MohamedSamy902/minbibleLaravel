@@ -25,43 +25,19 @@
                 @endif
 
                 <li class="dropdown">
-                    <a href="#" style="    padding-left: 120px;"><i class="fi fi-us" style="height: 20px;"></i>
-                        <span> &nbsp; {{ session()->get('locale') }}</span>
+                    <a href="#" style="    padding-left: 120px;"><i class="{{ $languages[0]->flag }}" style="height: 20px;"></i>
+                        <span> &nbsp; {{ session()->get('locale') ? session()->get('locale') : $languages[0]->name }}</span>
                         <i class="bi bi-chevron-down"></i>
                     </a>
                     <ul>
-                        {{-- <select class="form-control changeLang">
-                            <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
-                            <option value="fr" {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>France</option>
-                            <option value="sp" {{ session()->get('locale') == 'sp' ? 'selected' : '' }}>Spanish</option>
-                        </select> --}}
                         @foreach ($languages as $language)
                             <li>
                                 <a style="justify-content: left;" class="changeLang"
-                                    href="{{ route('changeLang', $language->name) }}"><i class="fi fi-us"
+                                    href="{{ route('changeLang', $language->name) }}"><i class="{{ $language->flag }}"
                                         style="height: 20px;"></i></i>{{ $language->name }}</a>
 
                             </li>
                         @endforeach
-                        {{-- <li>
-                            <!-- <a  class="" href="#"><i class="fi fi-us" style="height: 20px;"></i>English </a> -->
-                            <a style="justify-content: left;" href="#"><i class="fi fi-us"
-                                    style="height: 20px;"></i></i>English</a>
-
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                            <a style="justify-content: left;" href="#"><i class="fi fi-gr"
-                                    style="height: 20px;"></i></i>Polski</a>
-                        </li>
-
-                        <li>
-                            <a style="justify-content: left;" href="#"><i class="fi fi-eg"
-                                    style="height: 20px;"></i>Arabic</a>
-                        </li> --}}
-
                     </ul>
                 </li>
             </ul>
