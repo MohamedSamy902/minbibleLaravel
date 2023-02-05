@@ -25,7 +25,7 @@
                 <?php endif; ?>
 
                 <li class="dropdown">
-                    <a href="#" style="    padding-left: 120px;"><i class="<?php echo e($languages[0]->flag); ?>" style="height: 20px;"></i>
+                    <a href="#" style="    padding-left: 120px;"><i class="fi fi-<?php echo e($languages[0]->short_name); ?>" style="height: 20px;"></i>
                         <span> &nbsp; <?php echo e(session()->get('locale') ? session()->get('locale') : $languages[0]->name); ?></span>
                         <i class="bi bi-chevron-down"></i>
                     </a>
@@ -33,7 +33,7 @@
                         <?php $__currentLoopData = $languages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $language): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <li>
                                 <a style="justify-content: left;" class="changeLang"
-                                    href="<?php echo e(route('changeLang', $language->name)); ?>"><i class="<?php echo e($language->flag); ?>"
+                                    href="<?php echo e(route('changeLang', $language->name)); ?>"><i class="fi fi-<?php echo e($language->short_name); ?>"
                                         style="height: 20px;"></i></i><?php echo e($language->name); ?></a>
 
                             </li>
