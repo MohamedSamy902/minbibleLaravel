@@ -111,7 +111,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
   padding: 0px 0 0px;
@@ -237,7 +237,7 @@ h6 {
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
   color: #222222;
@@ -513,7 +513,7 @@ section {
 }
 
 .section-title {
-  text-align: center;
+  /* text-align: center; */
   padding-bottom: 30px;
 }
 
@@ -1531,8 +1531,8 @@ section {
 #footer .linksFooter ul li {
   list-style: none;
   text-align: left;
-  font-size: 18px;
-  padding-bottom: 15px;
+  font-size: 13px;
+  padding-bottom: 10px;
 }
 
 #footer .linksFooter ul li a {

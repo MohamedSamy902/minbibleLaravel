@@ -89,11 +89,11 @@
             <div class="container">
 
                 <div class="row">
-                    <div class="col-xl-12 d-flex align-items-stretch pt-5 pt-xl-0" data-aos="fade-left">
-                        <video style="padding-top: 50px;" src="./assets/img/video/video_en.mp4" autoplay="autoplay"
+                    {{-- <div class="col-xl-12 d-flex align-items-stretch pt-5 pt-xl-0" data-aos="fade-left">
+                        <video style="padding-top: 50px;" src="{{ asset('site') }}/assets/img/video/video_en.mp4" autoplay="autoplay"
                             controls="controls" width="100%" type="video/mp4"></video>
 
-                    </div>
+                    </div> --}}
                 </div>
 
             </div>
@@ -203,7 +203,7 @@
             <div class="container">
 
                 <div class="section-title" data-aos="fade-up">
-                    <h2>Non-Muslim View About MUHAMMAD (pbuh) </h2>
+                    <h2 class="text-center">Non-Muslim View About MUHAMMAD (pbuh) </h2>
                 </div>
 
                 <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -241,7 +241,7 @@
             <div class="container">
 
                 <div class="section-title" data-aos="fade-up">
-                    <h2>Contact Us</h2>
+                    <h2 class="text-center">Contact Us</h2>
                 </div>
 
                 <div class="row">

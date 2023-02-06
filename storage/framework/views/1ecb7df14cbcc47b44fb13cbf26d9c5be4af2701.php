@@ -19,7 +19,7 @@
 
             <div class="col-lg-3 text-lg-left linksFooter">
                 <div class="copyright">
-                    <h3>QUICK LINKS</h3>
+                    <h3 style="font-size: 1.4rem;">QUICK LINKS</h3>
                     <ul class="p-0">
                         <li><a href="#">About The Writer</a></li>
                         <li><a href="#">Non-Muslim Views</a></li>
@@ -32,7 +32,7 @@
             </div>
             <div class="col-lg-3 text-lg-left linksFooter">
                 <div class="copyright">
-                    <h3>RELATED SITES</h3>
+                    <h3 style="font-size: 1.4rem;">RELATED SITES</h3>
                     <ul class="p-0">
                         <li><a href="#">eDialogue</a></li>
                         <li><a href="#">ISNA</a></li>
@@ -46,7 +46,7 @@
             </div>
             <div class="col-lg-3 text-lg-left">
                 <div class="copyright">
-                    <h3>HAVING INQUIRY?</h3>
+                    <h3 style="font-size: 1.4rem;">HAVING INQUIRY?</h3>
                 </div>
                 <div class="credits inquiry">
                     <form>

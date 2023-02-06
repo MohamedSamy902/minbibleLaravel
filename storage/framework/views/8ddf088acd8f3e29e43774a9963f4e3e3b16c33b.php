@@ -27,11 +27,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
 <!-- Template Main CSS File -->
+<link href="<?php echo e(asset('site')); ?>/assets/css/style.css" rel="stylesheet">
 
 <?php if(session()->get('direction') == 'rtl'): ?>
     <link href="<?php echo e(asset('site')); ?>/assets/css/style_ar.css" rel="stylesheet">
-<?php else: ?>
-    <link href="<?php echo e(asset('site')); ?>/assets/css/style.css" rel="stylesheet">
 <?php endif; ?>
 
 
