@@ -10,7 +10,6 @@ return  [
     'image'         => 'Image',
     'list'          => 'list',
     'email_mobile'  => 'Email Or Mobile',
-
     'name'                  => 'Name',
     'name_ar'               => 'Name Ar',
     'name_en'               => 'Name En',
