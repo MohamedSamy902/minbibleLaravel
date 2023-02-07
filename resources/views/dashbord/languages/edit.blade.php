@@ -58,7 +58,7 @@
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationCustom03">Flag</label>
                                     <input class="form-control" id="validationCustom03" type="text"
-                                        name="flag" placeholder="fi fi-us" value="{{ old('flag') }}" />
+                                        name="flag" placeholder="fi fi-us" value="{{  old('flag') ? old('flag') : $language->flag  }}" />
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
