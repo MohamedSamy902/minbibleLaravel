@@ -10,9 +10,11 @@ body {
 
 #footer .linksFooter ul li {
     text-align: right;
+
 }
 
 .contact .info i
 {
     float: right;
+    padding-left: 8px;
 }

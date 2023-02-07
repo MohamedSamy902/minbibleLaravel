@@ -251,7 +251,11 @@
                             </div>
 
                             <div>
-                                <i class="ri-phone-line"></i>
+                                <?php if(session()->get('direction') == 'rtl'): ?>
+                                    <i class="fas fa-phone-alt"></i>
+                                <?php else: ?>
+                                    <i class="fas fa-phone"></i>
+                                <?php endif; ?>
                                 <p>+966 564317621</p>
                             </div>
 

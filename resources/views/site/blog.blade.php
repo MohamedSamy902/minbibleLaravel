@@ -3,7 +3,8 @@
 @section('content')
     <main id="main">
         <!-- ======= Breadcrumbs Section ======= -->
-        <section class="breadcrumbs" style="background-image: url('{{ asset('site') }}/assets/img/blog-bg.jpg');color: #fff;padding: 0px;">
+        <section class="breadcrumbs"
+            style="background-image: url('{{ asset('site') }}/assets/img/blog-bg.jpg');color: #fff;padding: 0px;">
             <div style="padding: 10px 0 24px;
         background: rgba(0, 169, 155, 0.85);">
                 <div class="container">
@@ -24,14 +25,14 @@
         <!-- ======= Post Grid Section ======= -->
         <section id="portfolio-details" class="portfolio-details">
             <div class="container" data-aos="fade-up">
-                <div class="row g-5">
-                    @foreach ($blogs as $blog)
+                <div class="row">
+                    {{-- @foreach ($blogs as $blog)
                         <div class="col-lg-8">
 
                             <div class="post-entry-1 lg">
                                 <a href="{{ route('singelblog', $blog->slug) }}"><img
-                                        src="{{ url('media/' . $blog->image->name) }}"
-                                        alt="" class="img-fluid pb-4"></a>
+                                        src="{{ url('media/' . $blog->image->name) }}" alt=""
+                                        class="img-fluid pb-4"></a>
                                 <div class="post-meta">
                                     <span>{{ \Carbon\Carbon::parse($blog->created_at)->format('d/M/Y') }}</span>
 
@@ -42,7 +43,8 @@
                                 <div class="d-flex align-items-center author">
                                     <!-- <div class="photo"><img src="assets/img/ar-b.png" alt="" class="img-fluid"></div> -->
                                     <div class="name">
-                                        <a class="m-0 p-0 btn btn-2 read-more" href="{{ route('singelblog', $blog->slug) }}">
+                                        <a class="m-0 p-0 btn btn-2 read-more"
+                                            href="{{ route('singelblog', $blog->slug) }}">
                                             Read more...
                                         </a>
                                     </div>
@@ -64,39 +66,27 @@
                             </ul>
                         </div>
 
-                    </div>
+                    </div> --}}
+
+                    @foreach ($blogs as $blog)
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card">
+                                <a href="{{ route('singelblog', $blog->slug) }}"><img src="{{ url('media/' . $blog->image->name) }}" class="card-img-top" alt="..."></a>
+
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="{{ route('singelblog', $blog->slug) }}">{{ $blog->title }}</a></h5>
+                                    {!! $blog->short_content !!}
+
+                                </div>
+
+                            </div>
+                        </div>
+                    @endforeach
 
 
-                </div> <!-- End .row -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div> <!-- End Cards -->
-            </div>
-            </div>
+            </div> <!-- End .row -->
+
 
         </section> <!-- End Post Grid Section -->
 

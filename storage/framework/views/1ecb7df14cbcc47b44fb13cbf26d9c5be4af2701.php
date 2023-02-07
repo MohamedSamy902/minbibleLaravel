@@ -10,7 +10,11 @@
                     </div>
 
                     <div>
-                        <i class="ri-phone-line"></i>
+                        <?php if(session()->get('direction') == 'rtl'): ?>
+                            <i class="fas fa-phone-alt"></i>
+                        <?php else: ?>
+                            <i class="fas fa-phone"></i>
+                        <?php endif; ?>
                         <p>+966 564317621 <br> (From 16:00 GMT)</p>
                     </div>
 
@@ -64,7 +68,9 @@
                                 type="text">
                         </div>
 
-                        <button type="submit" style="width:100%; border-radius: 0;background: #00b3a4; border: 0; padding: 10px 24px; color: #fff;" class="btn btn-primary" style="width: 100%;">Submit</button>
+                        <button type="submit"
+                            style="width:100%; border-radius: 0;background: #00b3a4; border: 0; padding: 10px 24px; color: #fff;"
+                            class="btn btn-primary" style="width: 100%;">Submit</button>
                     </form>
                 </div>
             </div>

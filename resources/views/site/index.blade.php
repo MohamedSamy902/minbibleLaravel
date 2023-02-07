@@ -253,7 +253,11 @@
                             </div>
 
                             <div>
-                                <i class="ri-phone-line"></i>
+                                @if (session()->get('direction') == 'rtl')
+                                    <i class="fas fa-phone-alt"></i>
+                                @else
+                                    <i class="fas fa-phone"></i>
+                                @endif
                                 <p>+966 564317621</p>
                             </div>
 
