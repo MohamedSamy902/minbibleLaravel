@@ -68,8 +68,8 @@
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationDefault08">Direction</label>
                                     <select class="form-select" id="validationDefault08" required="" name="direction">
-                                            <option value="rtl" {{ $language->view == 'rtl'? 'selected' : '' }}>Rtl</option>
-                                            <option value="ltr" {{ $language->view == 'ltr'? 'selected' : '' }}>Ltr</option>
+                                            <option value="rtl" {{ $language->direction == 'rtl'? 'selected' : '' }}>Rtl</option>
+                                            <option value="ltr" {{ $language->direction == 'ltr'? 'selected' : '' }}>Ltr</option>
 
                                     </select>
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>

@@ -25,11 +25,11 @@
                 <div class="copyright">
                     <h3 style="font-size: 1.4rem;">QUICK LINKS</h3>
                     <ul class="p-0">
-                        <li><a href="{{ route('index') }}#aboutWriter">About The Writer</a></li>
-                        <li><a href="{{ route('index') }}#testimonials">Non-Muslim Views</a></li>
+                        <li><a href="{{ route('index') }}#aboutWriter">{{ $aboutTheWriterTranslations->translation }}</a></li>
+                        <li><a href="{{ route('index') }}#testimonials">{{ $nonMuslimViewsTranslations->translation }}</a></li>
                         {{-- <li><a href="#">Photos & Videos</a></li> --}}
-                        <li><a href="{{ route('blog') }}">Blog</a></li>
-                        <li><a href="{{ route('index') }}#contact">Contact Us</a></li>
+                        <li><a href="{{ route('blog') }}">{{ $blogTranslations->translation }}</a></li>
+                        <li><a href="{{ route('index') }}#contact">{{ $contactTranslations->translation }}</a></li>
                     </ul>
                 </div>
 
