@@ -26,11 +26,23 @@ class Section extends Model implements HasMedia
     //     });
     // }
 
+
     public function image(){
         return $this->belongsTo(Image::class);
     }
 
     public function language(){
         return $this->belongsTo(Language::class);
+    }
+
+    public function scopeTransLang($query, $model)
+    {
+        if (DB::table('sections')->where('model','=', $model)->where('language_id', '=', session()->get('langID'))->exists()) {
+            $aboutTheBook = $query->where('model', '=', $model)->where('language_id', '=', session()->get('langID'));
+        } else {
+            $aboutTheBook = $query->where('model','=', $model)->where('language_id', '=', 1);
+        }
+
+        return $aboutTheBook;
     }
 }

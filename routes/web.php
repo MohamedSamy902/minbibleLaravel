@@ -12,6 +12,7 @@ use App\Http\Controllers\SectionController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\NonMuslimController;
+use App\Http\Controllers\TranslationController;
 
 // Route::group(
 // [
@@ -54,6 +55,10 @@ Route::group(
         Route::resource('category', CategoryController::class);
         // End Category
 
+        // Start Translation
+        Route::resource('translations', TranslationController::class);
+        // End Translation
+
 
         Route::get('sections/{model}',               [SectionController::class, 'index'])->name('sections.index');
         Route::get('sections/{model}/create',        [SectionController::class, 'create'])->name('sections.create');
@@ -69,21 +74,6 @@ Route::group(
 Route::get('lang/home', [LanguageController::class, 'index']);
 Route::get('lang/change/{short_name}', [LanguageController::class, 'change'])->name('changeLang');
 
-// Route::get('/', function () {
-//     $languages = Language::get();
-//     $section = Section::first();
-//     // return $section;
-//     // if ($sectionQ) {
-//     //     $section = Section::where('languages_id', 1)->first();
-//     // } else {
-//     //     $section = Section::get();
-//     //     return $section;
-
-//     //     // $section = Section::where('');
-//     // }
-//     // return $section;
-//     return view('site.index', compact('languages', 'section'));
-// });
 
 
 

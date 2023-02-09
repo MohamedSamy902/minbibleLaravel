@@ -25,11 +25,11 @@
                 <div class="copyright">
                     <h3 style="font-size: 1.4rem;">QUICK LINKS</h3>
                     <ul class="p-0">
-                        <li><a href="#">About The Writer</a></li>
-                        <li><a href="#">Non-Muslim Views</a></li>
-                        <li><a href="#">Photos & Videos</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="<?php echo e(route('index')); ?>#aboutWriter">About The Writer</a></li>
+                        <li><a href="<?php echo e(route('index')); ?>#testimonials">Non-Muslim Views</a></li>
+                        
+                        <li><a href="<?php echo e(route('blog')); ?>">Blog</a></li>
+                        <li><a href="<?php echo e(route('index')); ?>#contact">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -38,12 +38,12 @@
                 <div class="copyright">
                     <h3 style="font-size: 1.4rem;">RELATED SITES</h3>
                     <ul class="p-0">
-                        <li><a href="#">eDialogue</a></li>
-                        <li><a href="#">ISNA</a></li>
-                        <li><a href="#">Discover Islam</a></li>
-                        <li><a href="#">The Religion Of Islam</a></li>
-                        <li><a href="#">Islam Presentation Committee</a></li>
-                        <li><a href="#">Islam House</a></li>
+                        <li><a href="https://edialogue.org/" target="_blank">eDialogue</a></li>
+                        <li><a href="https://isna.net/" target="_blank">ISNA</a></li>
+                        <li><a href="https://www.discoverislam.com/" target="_blank">Discover Islam</a></li>
+                        <li><a href="https://www.islamreligion.com" target="_blank">The Religion Of Islam</a></li>
+                        <li><a href="https://ipc.org.kw/en/index.html" target="_blank">Islam Presentation Committee</a></li>
+                        <li><a href="https://islamhouse.com/en" target="_blank">Islam House</a></li>
                     </ul>
                 </div>
 

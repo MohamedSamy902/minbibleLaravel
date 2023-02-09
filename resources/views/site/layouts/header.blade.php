@@ -8,20 +8,20 @@
         <nav id="navbar" class="navbar">
             <ul>
                 @if (Route::current()->getName() == 'index')
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#aboutWriter">About The Writer</a></li>
-                    <li><a class="nav-link scrollto" href="#product">Our Products</a></li>
-                    <li><a class="nav-link scrollto " href="#testimonials">Non-Muslim Views </a></li>
-                    <li><a class="nav-link scrollto" href="{{ route('blog') }}">Blog</a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto active" href="#hero">{{ $homeTranslations->translation }}</a></li>
+                    <li><a class="nav-link scrollto" href="#aboutWriter">{{ $aboutTheWriterTranslations->translation }}</a></li>
+                    <li><a class="nav-link scrollto" href="#product">{{ $productsTranslations->translation }}</a></li>
+                    <li><a class="nav-link scrollto " href="#testimonials">{{ $nonMuslimViewsTranslations->translation }} </a></li>
+                    <li><a class="nav-link scrollto" href="{{ route('blog') }}">{{ $blogTranslations->translation }}</a></li>
+                    <li><a class="nav-link scrollto" href="#contact">{{ $contactTranslations->translation }}</a></li>
                 @else
 
                     <li><a class="nav-link scrollto" href="{{ route('index') }}#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="{{ route('index') }}#aboutWriter">About The Writer</a></li>
-                    <li><a class="nav-link scrollto" href="{{ route('index') }}#product">Our Products</a></li>
-                    <li><a class="nav-link scrollto" href="{{ route('index') }}#testimonials">Non-Muslim Views </a></li>
-                    <li><a class="nav-link scrollto active" href="{{ route('blog') }}">Blog</a></li>
-                    <li><a class="nav-link scrollto" href="{{ route('index') }}#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto" href="{{ route('index') }}#aboutWriter">{{ $aboutTheWriterTranslations->translation }}</a></li>
+                    <li><a class="nav-link scrollto" href="{{ route('index') }}#product">{{ $productsTranslations->translation }}</a></li>
+                    <li><a class="nav-link scrollto" href="{{ route('index') }}#testimonials">{{ $nonMuslimViewsTranslations->translation }} </a></li>
+                    <li><a class="nav-link scrollto active" href="{{ route('blog') }}">{{ $blogTranslations->translation }}</a></li>
+                    <li><a class="nav-link scrollto" href="{{ route('index') }}#contact">{{ $contactTranslations->translation }}</a></li>
                 @endif
 
                 <li class="dropdown">

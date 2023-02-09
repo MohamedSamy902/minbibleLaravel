@@ -140,8 +140,24 @@
                         </ul>
                     </li>
 
+                    <li class="dropdown">
+                        <a class="nav-link menu-title <?php echo e(prefixActive('nonmuslims')); ?>" href="javascript:void(0)">
+                            <i data-feather="home"></i>
+                            <span>Translations</span>
+                        </a>
+                        <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('translations')); ?>;">
+                            <li><a href="<?php echo e(route('translations.index')); ?>"
+                                    class="<?php echo e(routeActive('translations.index')); ?>">Translations</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo e(route('translations.create')); ?>" class="<?php echo e(routeActive('translations.create')); ?>">Add Translations
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
-                    
+
+
 
                 </ul>
             </div>

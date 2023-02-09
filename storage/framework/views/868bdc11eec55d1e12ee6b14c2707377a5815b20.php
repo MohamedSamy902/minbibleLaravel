@@ -8,20 +8,20 @@
         <nav id="navbar" class="navbar">
             <ul>
                 <?php if(Route::current()->getName() == 'index'): ?>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#aboutWriter">About The Writer</a></li>
-                    <li><a class="nav-link scrollto" href="#product">Our Products</a></li>
-                    <li><a class="nav-link scrollto " href="#testimonials">Non-Muslim Views </a></li>
-                    <li><a class="nav-link scrollto" href="<?php echo e(route('blog')); ?>">Blog</a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto active" href="#hero"><?php echo e($homeTranslations->translation); ?></a></li>
+                    <li><a class="nav-link scrollto" href="#aboutWriter"><?php echo e($aboutTheWriterTranslations->translation); ?></a></li>
+                    <li><a class="nav-link scrollto" href="#product"><?php echo e($productsTranslations->translation); ?></a></li>
+                    <li><a class="nav-link scrollto " href="#testimonials"><?php echo e($nonMuslimViewsTranslations->translation); ?> </a></li>
+                    <li><a class="nav-link scrollto" href="<?php echo e(route('blog')); ?>"><?php echo e($blogTranslations->translation); ?></a></li>
+                    <li><a class="nav-link scrollto" href="#contact"><?php echo e($contactTranslations->translation); ?></a></li>
                 <?php else: ?>
 
                     <li><a class="nav-link scrollto" href="<?php echo e(route('index')); ?>#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="<?php echo e(route('index')); ?>#aboutWriter">About The Writer</a></li>
-                    <li><a class="nav-link scrollto" href="<?php echo e(route('index')); ?>#product">Our Products</a></li>
-                    <li><a class="nav-link scrollto" href="<?php echo e(route('index')); ?>#testimonials">Non-Muslim Views </a></li>
-                    <li><a class="nav-link scrollto active" href="<?php echo e(route('blog')); ?>">Blog</a></li>
-                    <li><a class="nav-link scrollto" href="<?php echo e(route('index')); ?>#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto" href="<?php echo e(route('index')); ?>#aboutWriter"><?php echo e($aboutTheWriterTranslations->translation); ?></a></li>
+                    <li><a class="nav-link scrollto" href="<?php echo e(route('index')); ?>#product"><?php echo e($productsTranslations->translation); ?></a></li>
+                    <li><a class="nav-link scrollto" href="<?php echo e(route('index')); ?>#testimonials"><?php echo e($nonMuslimViewsTranslations->translation); ?> </a></li>
+                    <li><a class="nav-link scrollto active" href="<?php echo e(route('blog')); ?>"><?php echo e($blogTranslations->translation); ?></a></li>
+                    <li><a class="nav-link scrollto" href="<?php echo e(route('index')); ?>#contact"><?php echo e($contactTranslations->translation); ?></a></li>
                 <?php endif; ?>
 
                 <li class="dropdown">

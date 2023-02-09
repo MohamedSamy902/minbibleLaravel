@@ -139,8 +139,24 @@
                         </ul>
                     </li>
 
+                    <li class="dropdown">
+                        <a class="nav-link menu-title {{ prefixActive('nonmuslims') }}" href="javascript:void(0)">
+                            <i data-feather="home"></i>
+                            <span>Translations</span>
+                        </a>
+                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('translations') }};">
+                            <li><a href="{{ route('translations.index') }}"
+                                    class="{{ routeActive('translations.index') }}">Translations</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('translations.create') }}" class="{{ routeActive('translations.create') }}">Add Translations
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
-                    
+
+
 
                 </ul>
             </div>

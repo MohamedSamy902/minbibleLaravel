@@ -90,7 +90,7 @@
 
                 <div class="row">
                     <div class="col-xl-12 d-flex align-items-stretch pt-5 pt-xl-0" data-aos="fade-left">
-                        <video style="padding-top: 50px;" src="{{ asset('site') }}/assets/img/video/video_en.mp4" autoplay="autoplay"
+                        <video style="padding-top: 50px;" src="{{ asset('site') }}/assets/img/video/video_en.mp4" 
                             controls="controls" width="100%" type="video/mp4"></video>
 
                     </div>
