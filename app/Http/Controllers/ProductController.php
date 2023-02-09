@@ -114,6 +114,11 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
         $data = $request->all();
+
+        if ($request->image_id != null) {
+            $data['image_id'] = $request->image_id;
+        }
+
         if ($request->file('image')) {
             $file = $request->file('image');
             $filename = date('YmdHi') . $file->getClientOriginalName();
@@ -126,6 +131,12 @@ class ProductController extends Controller
             );
             $data['image_id'] = $image->id;
         }
+
+        // return $data;
+
+
+
+
 
         if ($request->file('pdf')) {
             $file = $request->file('pdf');
@@ -142,6 +153,7 @@ class ProductController extends Controller
 
             $data['audio'] = $filename;
         }
+
         $product->update($data);
 
         return redirect()->back()->with(['success' => 'Success Update']);

@@ -24,8 +24,8 @@
                         <h5><?php echo e(__('master.data')); ?></h5>
                     </div>
                     <div class="card-body">
-                        <form class="needs-validation" novalidate="" method="post" action="<?php echo e(route('products.update', $product->id)); ?>"
-                            enctype="multipart/form-data">
+                        <form class="needs-validation" novalidate="" method="post"
+                            action="<?php echo e(route('products.update', $product->id)); ?>" enctype="multipart/form-data">
                             <?php echo csrf_field(); ?>
                             <?php echo method_field('patch'); ?>
 
@@ -34,7 +34,7 @@
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationCustom01"><?php echo e(__('master.title_en')); ?></label>
                                     <input class="form-control" id="validationCustom01" type="text" name="title"
-                                        required="" value="<?php echo e(old('title') ? old('title') : $product->title); ?>"/>
+                                        required="" value="<?php echo e(old('title') ? old('title') : $product->title); ?>" />
                                     <div class="valid-feedback"><?php echo e(__('validation.valid_feedback')); ?></div>
                                     <div class="invalid-feedback"><?php echo e(__('validation.invalid_feedback')); ?></div>
                                 </div>
@@ -42,9 +42,9 @@
 
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
-                                    <label class="form-label"
-                                        for="validationCustom03"><?php echo e(__('master.content_en')); ?></label>
-                                    <textarea  id="editor1" cols="30" rows="10" class="form-control" id="validationCustom03" type="text" name="content" required="required"><?php echo e($product->content); ?></textarea>
+                                    <label class="form-label" for="validationCustom03"><?php echo e(__('master.content_en')); ?></label>
+                                    <textarea id="editor1" cols="30" rows="10" class="form-control" id="validationCustom03" type="text"
+                                        name="content" required="required"><?php echo e($product->content); ?></textarea>
                                     <div class="valid-feedback"><?php echo e(__('validation.valid_feedback')); ?></div>
                                     <div class="invalid-feedback"><?php echo e(__('validation.invalid_feedback')); ?></div>
                                 </div>
@@ -53,12 +53,12 @@
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationDefault09">Languages</label>
-                                    <select class="form-select" data-live-search="true"
-                                        id="validationDefault09"  name="language_id">
+                                    <select class="form-select" data-live-search="true" id="validationDefault09"
+                                        name="language_id">
                                         <option disabled="" value="">Languages
                                         </option>
                                         <?php $__currentLoopData = $languages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $language): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            <option <?php echo e($product->language_id == $language->id ? 'selected'  : ''); ?>
+                                            <option <?php echo e($product->language_id == $language->id ? 'selected' : ''); ?>
 
                                                 value="<?php echo e($language->id); ?>"><?php echo e($language->name); ?></option>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -73,11 +73,10 @@
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationDefault09">Image</label>
-                                    <select class="form-select" data-live-search="true"
-                                        id="validationDefault09"  name="image_id">
+                                    <select class="form-select" id="validationDefault09" name="image_id">
                                         <option selected value="">Image Name </option>
                                         <?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $imag): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            <option <?php echo e(old('image_id') == $imag->id ? 'selected' : ''); ?>
+                                            <option <?php echo e($product->image_id == $imag->id ? 'selected' : ''); ?>
 
                                                 value="<?php echo e($imag->id); ?>"><?php echo e($imag->name); ?></option>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -118,6 +117,8 @@
                             </div>
 
 
+
+
                             <button class="btn btn-primary" type="submit"><?php echo e(__('master.save')); ?></button>
                         </form>
                     </div>
@@ -129,7 +130,7 @@
 
 
     <?php $__env->startPush('scripts'); ?>
-    <script src="<?php echo e(asset('assets/js/editor/ckeditor/ckeditor.js')); ?>"></script>
+        <script src="<?php echo e(asset('assets/js/editor/ckeditor/ckeditor.js')); ?>"></script>
         <script src="<?php echo e(asset('assets/js/editor/ckeditor/adapters/jquery.js')); ?>"></script>
         <script src="<?php echo e(asset('assets/js/editor/ckeditor/styles.js')); ?>"></script>
         <script src="<?php echo e(asset('assets/js/editor/ckeditor/ckeditor.custom.js')); ?>"></script>

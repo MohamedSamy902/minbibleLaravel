@@ -26,8 +26,8 @@
                         <h5>{{ __('master.data') }}</h5>
                     </div>
                     <div class="card-body">
-                        <form class="needs-validation" novalidate="" method="post" action="{{ route('products.update', $product->id) }}"
-                            enctype="multipart/form-data">
+                        <form class="needs-validation" novalidate="" method="post"
+                            action="{{ route('products.update', $product->id) }}" enctype="multipart/form-data">
                             @csrf
                             @method('patch')
 
@@ -36,7 +36,7 @@
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationCustom01">{{ __('master.title_en') }}</label>
                                     <input class="form-control" id="validationCustom01" type="text" name="title"
-                                        required="" value="{{ old('title') ? old('title') : $product->title }}"/>
+                                        required="" value="{{ old('title') ? old('title') : $product->title }}" />
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
@@ -44,9 +44,9 @@
 
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
-                                    <label class="form-label"
-                                        for="validationCustom03">{{ __('master.content_en') }}</label>
-                                    <textarea  id="editor1" cols="30" rows="10" class="form-control" id="validationCustom03" type="text" name="content" required="required">{{ $product->content }}</textarea>
+                                    <label class="form-label" for="validationCustom03">{{ __('master.content_en') }}</label>
+                                    <textarea id="editor1" cols="30" rows="10" class="form-control" id="validationCustom03" type="text"
+                                        name="content" required="required">{{ $product->content }}</textarea>
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
@@ -55,12 +55,12 @@
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationDefault09">Languages</label>
-                                    <select class="form-select" data-live-search="true"
-                                        id="validationDefault09"  name="language_id">
+                                    <select class="form-select" data-live-search="true" id="validationDefault09"
+                                        name="language_id">
                                         <option disabled="" value="">Languages
                                         </option>
                                         @foreach ($languages as $language)
-                                            <option {{ $product->language_id == $language->id ? 'selected'  : ''}}
+                                            <option {{ $product->language_id == $language->id ? 'selected' : '' }}
                                                 value="{{ $language->id }}">{{ $language->name }}</option>
                                         @endforeach
                                     </select>
@@ -74,11 +74,10 @@
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationDefault09">Image</label>
-                                    <select class="form-select" data-live-search="true"
-                                        id="validationDefault09"  name="image_id">
+                                    <select class="form-select" id="validationDefault09" name="image_id">
                                         <option selected value="">Image Name </option>
                                         @foreach ($images as $imag)
-                                            <option {{ old('image_id') == $imag->id ? 'selected' : '' }}
+                                            <option {{ $product->image_id == $imag->id ? 'selected' : '' }}
                                                 value="{{ $imag->id }}">{{ $imag->name }}</option>
                                         @endforeach
                                     </select>
@@ -131,7 +130,7 @@
 
 
     @push('scripts')
-    <script src="{{ asset('assets/js/editor/ckeditor/ckeditor.js') }}"></script>
+        <script src="{{ asset('assets/js/editor/ckeditor/ckeditor.js') }}"></script>
         <script src="{{ asset('assets/js/editor/ckeditor/adapters/jquery.js') }}"></script>
         <script src="{{ asset('assets/js/editor/ckeditor/styles.js') }}"></script>
         <script src="{{ asset('assets/js/editor/ckeditor/ckeditor.custom.js') }}"></script>

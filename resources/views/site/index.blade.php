@@ -89,11 +89,11 @@
             <div class="container">
 
                 <div class="row">
-                    {{-- <div class="col-xl-12 d-flex align-items-stretch pt-5 pt-xl-0" data-aos="fade-left">
+                    <div class="col-xl-12 d-flex align-items-stretch pt-5 pt-xl-0" data-aos="fade-left">
                         <video style="padding-top: 50px;" src="{{ asset('site') }}/assets/img/video/video_en.mp4" autoplay="autoplay"
                             controls="controls" width="100%" type="video/mp4"></video>
 
-                    </div> --}}
+                    </div>
                 </div>
 
             </div>
@@ -105,7 +105,6 @@
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
                     <h2>OUR PRODUCTS</h2>
-                    <!-- <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fug</p> -->
                 </div>
 
                 <div class="row">
@@ -151,7 +150,7 @@
                                                 aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <iframe src="{{ url('file/' . $product->image->name) }}" width="100%"
+                                            <iframe src="{{ url('file/' . $product->pdf) }}" width="100%"
                                                 height="500px"></iframe>
                                         </div>
                                         <div class="modal-footer">
@@ -167,21 +166,19 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="AudioModalLabel">BROCHURE</h5>
+                                                <h5 class="modal-title" id="AudioModalLabel">{{ $product->title  }}</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <audio controls style="width: 100%;">
-                                                    <source src="horse.ogg" type="audio/ogg">
-                                                    <source src="horse.mp3" type="audio/mpeg">
-                                                    Your browser does not support the audio element.
+                                                    <source src="{{ url('file/' . $product->audio) }}" type="audio/ogg">
+                                                    <source src="{{ url('file/' . $product->audio) }}" type="audio/mpeg">
                                                 </audio>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
                                                     data-bs-dismiss="modal">Close</button>
-                                                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
                                             </div>
                                         </div>
                                     </div>

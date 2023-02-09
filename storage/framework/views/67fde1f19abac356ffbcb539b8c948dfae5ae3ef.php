@@ -3,7 +3,7 @@
     <section id="hero" class="d-flex align-items-center">
 
         <div class="container">
-            <div class="row">
+            <div class="row sm">
 
                 <div class="col-lg-5 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
                     <p data-aos="fade-up" class="aos-init aos-animate"
@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="row content">
-                    <div class="col-lg-4 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
+                    <div class="col-lg-4 pt-4 pt-lg-0 pb-sm-5 mb-5" data-aos="fade-up" data-aos-delay="300">
                         <div class="image text-center" data-aos="fade-right" data-aos-delay="150">
                             <img src="<?php echo e(url('media/' . $aboutTheBook->image->name)); ?>" alt="" class="img-fluid"
                                 style="box-shadow: -13px 12px 0px 0px #00b3a4; background-color: #FFF;height: 55vh;">
@@ -90,7 +90,11 @@
             <div class="container">
 
                 <div class="row">
-                    
+                    <div class="col-xl-12 d-flex align-items-stretch pt-5 pt-xl-0" data-aos="fade-left">
+                        <video style="padding-top: 50px;" src="<?php echo e(asset('site')); ?>/assets/img/video/video_en.mp4" autoplay="autoplay"
+                            controls="controls" width="100%" type="video/mp4"></video>
+
+                    </div>
                 </div>
 
             </div>
@@ -102,12 +106,11 @@
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
                     <h2>OUR PRODUCTS</h2>
-                    <!-- <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fug</p> -->
                 </div>
 
                 <div class="row">
                     <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <div class="col-md-4 d-flex align-items-stretch mt-md-0">
+                        <div class="col-md-4 d-flex align-items-center mt-md-0">
                             <div class="card" data-aos="fade-up" data-aos-delay="100">
                                 <img src="<?php echo e(url('media/' . $product->image->name)); ?>" class="img-fluid">
                                 <div class="card-body" style="position: absolute;left: 5%;">
@@ -148,7 +151,7 @@
                                                 aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <iframe src="<?php echo e(url('file/' . $product->image->name)); ?>" width="100%"
+                                            <iframe src="<?php echo e(url('file/' . $product->pdf)); ?>" width="100%"
                                                 height="500px"></iframe>
                                         </div>
                                         <div class="modal-footer">
@@ -164,21 +167,19 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="AudioModalLabel">BROCHURE</h5>
+                                                <h5 class="modal-title" id="AudioModalLabel"><?php echo e($product->title); ?></h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <audio controls style="width: 100%;">
-                                                    <source src="horse.ogg" type="audio/ogg">
-                                                    <source src="horse.mp3" type="audio/mpeg">
-                                                    Your browser does not support the audio element.
+                                                    <source src="<?php echo e(url('file/' . $product->audio)); ?>" type="audio/ogg">
+                                                    <source src="<?php echo e(url('file/' . $product->audio)); ?>" type="audio/mpeg">
                                                 </audio>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
                                                     data-bs-dismiss="modal">Close</button>
-                                                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
                                             </div>
                                         </div>
                                     </div>
@@ -263,7 +264,7 @@
                     </div>
 
                     <div class="col-lg-8 col-md-12" data-aos="fade-up" data-aos-delay="300">
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form mb-5">
                             <div class="form-group">
                                 <input type="text" name="name" class="form-control" id="name"
                                     placeholder="Your Name" required>
